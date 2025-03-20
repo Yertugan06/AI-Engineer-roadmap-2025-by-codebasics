@@ -25,7 +25,6 @@ This roadmap is designed for complete beginners and spans over **8 months**. It 
 - ✅ Mathematics & Statistics for AI  
 - ✅ Exploratory Data Analysis (EDA)  
 - ✅ Machine Learning (Preprocessing, Model Building, Evaluation)  
-- ✅ Machine Learning Projects  
 - ✅ MLOps & FastAPI  
 - ✅ Deep Learning (CNN, RNN, LSTM)
 - ✅ NLP
