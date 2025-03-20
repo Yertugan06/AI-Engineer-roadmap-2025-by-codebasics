@@ -1,6 +1,6 @@
 # 🧠 AI Engineer Roadmap 2025 - My Learning Journey
 
-Welcome to my personal journey as I follow the **AI Engineer Roadmap 2025 by Codebasics**. This repository documents my progress and projects as I learn skills required to become an AI/ML Engineer from scratch.
+Welcome to my personal journey as I follow the **AI Engineer Roadmap 2025 by Codebasics**. This repository documents my projects as I learn skills required to become an AI/ML Engineer from scratch.
 
 ---
 
