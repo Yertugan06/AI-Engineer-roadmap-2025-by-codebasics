@@ -27,7 +27,7 @@ This roadmap is designed for complete beginners and spans over **8 months**. It 
 - ✅ Machine Learning (Preprocessing, Model Building, Evaluation)  
 - ✅ Machine Learning Projects  
 - ✅ MLOps & FastAPI  
-- ✅ Deep Learning(CNN, RNN, LSTM)
+- ✅ Deep Learning (CNN, RNN, LSTM)
 - ✅ NLP
 - ✅ Computer Vision  
 - ✅ Generative AI (LLMs, RAG, Agents)  
