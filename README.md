@@ -16,19 +16,17 @@ This roadmap is designed for complete beginners and spans over **8 months**. It 
 
 ## 📌 Topics Covered
 
-- ✅ Computer Science Fundamentals  
-- ✅ Python Programming
-- ✅ Data Structures and Algorithms  
-- ✅ SQL & NoSQL Databases  
-- ✅ Git & GitHub  
-- ✅ Numpy, Pandas & Data Visualization  
-- ✅ Mathematics & Statistics for AI  
-- ✅ Exploratory Data Analysis (EDA)  
-- ✅ Machine Learning (Preprocessing, Model Building, Evaluation)  
-- ✅ MLOps & FastAPI  
-- ✅ Deep Learning (CNN, RNN, LSTM)
-- ✅ NLP
-- ✅ Computer Vision  
-- ✅ Generative AI (LLMs, RAG, Agents)  
-
-
+- Computer Science Fundamentals  
+- Python Programming
+- Data Structures and Algorithms  
+- SQL & NoSQL Databases  
+- Git & GitHub  
+- Numpy, Pandas & Data Visualization  
+- Mathematics & Statistics for AI  
+- Exploratory Data Analysis (EDA)  
+- Machine Learning (Preprocessing, Model Building, Evaluation)  
+- MLOps & FastAPI  
+- Deep Learning (CNN, RNN, LSTM)
+- NLP
+- Computer Vision  
+- Generative AI (LLMs, RAG, Agents)  
