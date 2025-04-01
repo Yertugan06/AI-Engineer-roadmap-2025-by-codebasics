@@ -16,7 +16,6 @@ This roadmap is designed for complete beginners and spans over **8 months**. It 
 
 ## 📌 Topics Covered
 
-- Computer Science Fundamentals  
 - Advanced Python Programming
 - Data Structures and Algorithms  
 - SQL & NoSQL Databases  
