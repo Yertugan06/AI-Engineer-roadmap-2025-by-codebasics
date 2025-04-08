@@ -1,1 +1,11 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+sales_data = pd.read_csv('train.csv')
+print(sales_data.info())
+
+# Data cleaning is not needed
+
+#Feature engineering is not needed
