@@ -65,3 +65,6 @@ phone_sales = sales_data[sales_data["Sub-Category"] == "Phones"]["Sales"].sum() 
 print(f"Consumer Sales: {consumer_sales:.2f}%")
 print(f"Chairs and Phones Sales: {(chair_sales + phones_sales):.2f}%")
 
+print(sales_data[(sales_data["Segment"] == "Consumer") & 
+           ((sales_data["Sub-Category"] == "Chairs") | (sales_data["Sub-Category"] == "Phones"))]["Sales"].sum() / (sales_data[sales_data['Segment'] == "Consumer"]["Sales"].sum()) * 100)
+
