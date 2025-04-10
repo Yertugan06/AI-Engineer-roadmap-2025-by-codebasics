@@ -1,10 +1,67 @@
+# https://www.kaggle.com/datasets/rohitsahoo/sales-forecasting
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 sales_data = pd.read_csv('train.csv')
+# Convert to datetime
+sales_data["Order Date"] = pd.to_datetime(sales_data["Order Date"], format="%d/%m/%Y")
+sales_data["Ship Date"] = pd.to_datetime(sales_data["Ship Date"], format="%d/%m/%Y")
+
 print(sales_data.info())
 
 # Data cleaning is not needed
-#Feature engineering is not needed
+# Feature engineering is not needed
+
+# EDA
+
+# 1. Characteristics
+" 3 Segments : ['Consumer' 'Corporate' 'Home Office'] " 
+" 4 Ship Modes: ['Second Class' 'Standard Class' 'First Class' 'Same Day'] "
+" Sales only in United States America "
+" 4 Regions : ['South' 'West' 'Central' 'East'] "
+" 1861 unique products "
+" 3 categories : ['Furniture' 'Office Supplies' 'Technology'] "
+" 17 sub category "
+" Max Date : 31/12/2018 ,  Min Date : 01/01/2016 "
+
+# 2. Insights 
+" Consumer Segment Sales: 50.76% , the main segment "
+" Chairs and Phones Subcategory Sales 28.77%, the main product types "
+"  "
+
+print(sales_data['Segment'].unique())
+print(sales_data['Product ID'].unique().size)  # Like this some basic operations to discover characteristics
+
+
+total_sales = sales_data['Sales'].sum()
+sales_segment = sales_data.groupby('Segment')['Sales'].sum()
+sales_category = sales_data.groupby('Category')['Sales'].sum()
+sales_subcategory = sales_data.groupby('Sub-Category')['Sales'].sum()
+
+fig, ax = plt.subplots(3, 1, figsize=(20, 15))
+# Subplot 1: Sales by Segment
+sns.barplot(x=sales_segment.index, y=sales_segment.values, ax=ax[0])
+ax[0].set_title('Sales by Segment')
+
+# Subplot 2: Sales by Category
+sns.barplot(x=sales_category.index, y=sales_category.values, ax=ax[1])
+ax[1].set_title('Sales by Category')
+
+# Subplot 3: Sales by Sub-Category
+sns.barplot(x=sales_subcategory.index, y=sales_subcategory.values, ax=ax[2])
+ax[2].set_title('Sales by Sub-Category')
+
+plt.tight_layout()
+plt.show()
+
+
+consumer_sales = sales_data[sales_data["Segment"] == "Consumer"]["Sales"].sum() / total_sales * 100
+chair_sales = sales_data[sales_data["Sub-Category"] == "Chairs"]["Sales"].sum() / total_sales * 100
+phone_sales = sales_data[sales_data["Sub-Category"] == "Phones"]["Sales"].sum() / total_sales * 100
+
+print(f"Consumer Sales: {consumer_sales:.2f}%")
+print(f"Chairs and Phones Sales: {(chair_sales + phones_sales):.2f}%")
+
