@@ -30,7 +30,7 @@ print(sales_data.info())
 # 2. Insights 
 " Consumer Segment Sales: 50.76% , the main segment "
 " Chairs and Phones Subcategory Sales 28.77%, the main product types "
-"  "
+" Customers buy 29.65% Chairs and Phones "
 
 print(sales_data['Segment'].unique())
 print(sales_data['Product ID'].unique().size)  # Like this some basic operations to discover characteristics
