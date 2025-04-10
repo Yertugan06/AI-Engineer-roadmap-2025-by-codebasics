@@ -31,6 +31,8 @@ print(sales_data.info())
 " Consumer Segment Sales: 50.76% , the main segment "
 " Chairs and Phones Subcategory Sales 28.77%, the main product types "
 " Customers buy 29.65% Chairs and Phones "
+" East and West region have 61% sales "
+" 60% sales in standard ship mode "
 
 print(sales_data['Segment'].unique())
 print(sales_data['Product ID'].unique().size)  # Like this some basic operations to discover characteristics
@@ -67,4 +69,26 @@ print(f"Chairs and Phones Sales: {(chair_sales + phones_sales):.2f}%")
 
 print(sales_data[(sales_data["Segment"] == "Consumer") & 
            ((sales_data["Sub-Category"] == "Chairs") | (sales_data["Sub-Category"] == "Phones"))]["Sales"].sum() / (sales_data[sales_data['Segment'] == "Consumer"]["Sales"].sum()) * 100)
+
+
+sales_by_region = sales_data.groupby('Region')['Sales'].sum()
+region_percentages = (sales_by_region / total_sales) * 100
+
+# Sales by region
+plt.figure(figsize=(8, 8))
+plt.pie(region_percentages, labels=sales_by_region.index, autopct='%1.1f%%', startangle=90)
+plt.title('Sales by Region')
+plt.show()
+
+sales_by_ship_mode = sales_data.groupby('Ship Mode')['Sales'].sum()
+ship_mode_percentages = (sales_by_ship_mode / total_sales) * 100
+
+# Sales in ship mode
+plt.figure(figsize=(10, 6))
+plt.bar(sales_by_ship_mode.index, ship_mode_percentages)
+plt.xlabel('Ship Mode')
+plt.ylabel('Sales Percentage')
+plt.title('Sales by Ship Mode')
+plt.show()
+
 
