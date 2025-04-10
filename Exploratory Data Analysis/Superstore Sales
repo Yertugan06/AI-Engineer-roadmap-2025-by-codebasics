@@ -92,7 +92,7 @@ plt.ylabel('Sales Percentage')
 plt.title('Sales by Ship Mode')
 plt.show()
 
-
+#Sales comparision by year
 sales_2016 = sales_data[sales_data["Order Date"].dt.year == 2016].groupby(sales_data["Order Date"].dt.month)["Sales"].sum().reset_index()
 sales_2017 = sales_data[sales_data["Order Date"].dt.year == 2017].groupby(sales_data["Order Date"].dt.month)["Sales"].sum().reset_index()
 sales_2018 = sales_data[sales_data["Order Date"].dt.year == 2018].groupby(sales_data["Order Date"].dt.month)["Sales"].sum().reset_index()
