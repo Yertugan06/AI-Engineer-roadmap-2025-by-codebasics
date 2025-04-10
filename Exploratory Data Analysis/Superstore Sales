@@ -33,6 +33,7 @@ print(sales_data.info())
 " Customers buy 29.65% Chairs and Phones "
 " East and West region have 61% sales "
 " 60% sales in standard ship mode "
+" The most sales for 9 - 12 month, mostly 11-12 months is peak "
 
 print(sales_data['Segment'].unique())
 print(sales_data['Product ID'].unique().size)  # Like this some basic operations to discover characteristics
@@ -92,3 +93,19 @@ plt.title('Sales by Ship Mode')
 plt.show()
 
 
+sales_2016 = sales_data[sales_data["Order Date"].dt.year == 2016].groupby(sales_data["Order Date"].dt.month)["Sales"].sum().reset_index()
+sales_2017 = sales_data[sales_data["Order Date"].dt.year == 2017].groupby(sales_data["Order Date"].dt.month)["Sales"].sum().reset_index()
+sales_2018 = sales_data[sales_data["Order Date"].dt.year == 2018].groupby(sales_data["Order Date"].dt.month)["Sales"].sum().reset_index()
+
+plt.figure(figsize=(12, 6))
+sns.lineplot(x=sales_2016["Order Date"], y=sales_2016["Sales"], label="2016", marker="o")
+sns.lineplot(x=sales_2017["Order Date"], y=sales_2017["Sales"], label="2017", marker="o")
+sns.lineplot(x=sales_2018["Order Date"], y=sales_2018["Sales"], label="2018", marker="o")
+plt.title("Monthly Sales Comparison (2016-2018)")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+plt.xticks(range(1, 13))
+
+plt.legend()
+plt.tight_layout()
+plt.show()
