@@ -28,4 +28,5 @@ This roadmap is designed for complete beginners and spans over **8 months**. It 
 - Deep Learning (CNN, RNN, LSTM)
 - NLP
 - Computer Vision  
-- Generative AI (LLMs, RAG, Agents)  
+- Generative AI (LLMs, RAG, Agents)
+Additional Frontend basics(for end-to-end projects, HTML, TailwindCSS, Javascript ,React)
