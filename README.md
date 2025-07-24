@@ -29,4 +29,3 @@ This roadmap is designed for complete beginners and spans over **8 months**. It 
 - NLP
 - Computer Vision  
 - Generative AI (LLMs, RAG, Agents)
-- Additional Frontend basics(for end-to-end projects, HTML, TailwindCSS, Javascript ,React)
