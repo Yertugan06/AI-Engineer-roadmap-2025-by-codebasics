@@ -3,3 +3,4 @@ uvicorn==0.34.3
 numpy==2.3.3
 scikit-learn==1.6.1
 pandas==2.3.3
+gradio==5.49.1
