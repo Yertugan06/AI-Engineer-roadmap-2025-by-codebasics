@@ -1,7 +1,7 @@
 import gradio as gr
 import requests
 
-BASE_URL = "http://127.0.0.1:8000"
+BASE_URL = "http://127.0.0.1/api"
 
 
 def get_location_names():
@@ -36,7 +36,7 @@ def get_estimated_price(total_sqft, bath, bhk, location):
 
 
 def build_ui():
-    with gr.Blocks(title="🏡 Real Estate Price Estimator",theme="gradio/soft") as demo:
+    with gr.Blocks(title="🏡 Real Estate Price Estimator") as demo:
         gr.Markdown("## 🏙️ Real Estate Price Prediction")
         locations = get_location_names()
 
@@ -58,4 +58,4 @@ def build_ui():
 
 if __name__ == "__main__":
     demo = build_ui()
-    demo.launch()
+    demo.launch(theme="soft")

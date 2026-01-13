@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import util
 
+
 app = FastAPI(
     title="Real Estate Price Prediction API",
     description="Predicts property prices based on input features like location, sqft, BHK, and baths.",
@@ -36,4 +37,4 @@ def get_estimated_price(
 
 if __name__ == "__main__":
     util.load_saved_artifacts()
-    uvicorn.run("server:app", host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
